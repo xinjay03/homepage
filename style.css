@@ -1,0 +1,409 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200; 300; 400; 600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bitter:wght@100&display=swap');
+:root{
+    --yellow:#f9ca24;
+}
+*{
+    font-family: 'Raleway', serif;
+    margin:0; padding:0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border:none;
+    text-transform: capitalize;
+    transition: all .2s linear;                      /*動態變化*/
+}
+*::selection{
+    background:var(--yellow);           /*游標顏色黃色*/
+    color:#333;
+}
+html{
+    font-size: 62.5%;
+    overflow-x:hidden;
+} 
+html::-webkit-scrollbar{
+    width:1.4rem;
+}
+html::-webkit-scrollbar-track{
+    background : #222;
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--yellow);
+}
+body{
+         /*中間主畫面顏色*/
+    overflow-x: hidden;
+    padding-left: 35rem;
+}
+section{
+    min-height: 100vh;
+    padding: 1rem;
+}
+.home{
+    background-color: #00a19a;
+}
+.about {
+    background-image: url(flower1.jpg); 
+    background-size: cover;
+    height: 400px;
+    background-attachment: fixed;
+}
+.flowers {
+    background-color: #a6d1c9;
+    
+}
+.portfolio {
+    background-color: #a6d1c9;
+}
+
+.btn{
+    padding:.7rem 3rem;     /*button的形式*/
+    background: #333;
+    color:#fff;
+    cursor: pointer;
+    margin-top: 1rem;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+.btn i{
+    padding:0.5rem;
+    font-size: 1.8rem;
+}
+.btn:hover{                       /*hover滑鼠碰到的換色效果*/
+    background:var(--yellow);       /*滑鼠碰到變黃色*/
+}
+
+.heading{
+    text-align: center;
+    margin:0 6rem;
+    font-size: 4rem;
+    padding: 1rem;
+    border-bottom: .1rem solid #fff4;
+    color:#fff;
+}
+.heading span{
+    color:var(--yellow);
+}
+
+header {                 /*左欄的設定值*/
+    position: fixed; 
+    top: 0; left:0;     /*左欄位置*/
+    z-index: 1000;
+    height:100%;
+    width:35rem;
+    background: #1a1a1a;    /*左欄背景顏色*/
+    display: flex;
+    align-items: center;
+    justify-content: center;  /*內容置中*/
+    flex-flow: column;     /*排列方式 橫的*/
+    text-align: center;     /*字 置中*/
+}
+header .user img{      /*照片樣式*/
+    height:17rem;
+    width:17rem;
+    border-radius: 50%;     /*邊框圓弧*/
+    object-fit: cover;      /*圖片fit邊框*/
+    margin-bottom: 1rem;
+    border:.7rem solid var(--yellow);       /*邊框粗細*/
+}
+header .user .name{
+    font-size: 3.5rem;
+    color: #fff;
+}
+header .user .post{
+    font-size: 2rem;
+    color: #eee;
+}
+header .navbar{
+    width:100%;
+}
+header .navbar ul{
+    list-style: none;
+    padding:1rem 3rem;
+}
+header .navbar ul li a{         
+    display: block;         /*文字加框*/
+    padding:1rem;           
+    margin:1.5rem 0;
+    background: #333;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 5rem;
+}
+header .navbar ul li a:hover{       /*(HOVER)鼠標移至元件的動作*/
+    background: var(--yellow);      /*背景變黃色*/
+}
+#menu{          
+    position: fixed;            /*menu的地方*/
+    top:2rem; right:2rem;
+    background: #333;
+    color:#fff;
+    cursor: pointer;
+    font-size: 2.5rem;
+    padding:1rem 1.5rem;
+    z-index: 1000;
+    display: none;
+}
+
+.home{                          /*主頁的設定值*/
+    display: inline-flex;
+    justify-content: center;
+    flex-flow: column;
+    font-family: 'Raleway', serif;
+    margin-top: 0;
+    line-height: 1.2;
+    font-weight:100px;
+    padding:10rem 30rem;
+}
+.home h3{                     /*home裡面h3(HI THERE)的字體設定*/
+    font-size: 9em;
+    color: #ebeded;
+    letter-spacing:10px;
+}
+.home h1{                     /*home裡面h1(HI THERE)的字體設定*/
+    font-size: 9em;
+    color: #ebeded;
+    letter-spacing:10px;
+}
+.home .box .a h2{
+    font-weight:100px;
+    font-size: 9em;
+    color:var(--yellow);
+    letter-spacing:10px;
+}
+.home #myVideo {
+    height: 30rem;
+    width: 40rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.home .box {
+    width: 900px;
+    display: inline-flex;
+    flex-flow: row;
+    position: relative;
+}
+.home .box .a{
+    width: 800px;
+    height: 200px;
+    position: relative;
+}
+.home .box .b{
+    width: 500px;
+    height: 200px;
+    position: absolute;
+    bottom:0px;
+    right:0px;
+}
+.about .box-container{
+    display: inline;
+    float: left;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 5rem 2rem;
+}
+.about .box-container .box{
+    height: 35rem;
+    width: 40rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.about .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    
+}
+.about .box-container .box:hover img{           /*圖片放大縮小*/
+    transform: scale(1.2);
+}
+@keyframes movedown1{
+    0%{
+        transform: translateY(-100px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+.about h2{
+    font-weight: 700;
+    font-size: 5em;
+    padding: 2rem 0;
+    text-align: center;
+    color: #fff;
+    font-family: 'Yuji Boku', serif;
+}
+.about p{
+    font-size: 2.5rem;
+    background-color: #a98b73;
+    border-radius: 10px;
+    color:rgb(255, 255, 255);
+    padding-top: 1rem 0;
+}
+.flowers .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+}
+.flowers ul li{
+    list-style:none;
+}
+.flowers p{
+    font-size: 2rem;
+    color:rgb(36, 36, 36);
+    padding-top: 1rem 0;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+.flowers .box-container .box{
+    height: 20rem;
+    width: 26rem;
+    border-radius: 1rem;
+    margin: 2rem;
+    overflow: hidden;
+    cursor: pointer;
+}
+.flowers .box-container .box img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.flowers .box-container .box:hover img{           /*圖片放大縮小*/
+    transform: scale(1.2);
+}
+
+.portfolio .hi-slide
+{
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 40px auto 0;
+}
+.portfolio .hi-slide .hi-next,.portfolio .hi-slide .hi-prev
+{
+    position: absolute;
+    top:50%;
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    border-radius: 50px;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    background-color: white;
+    color: black;
+    transition: all 0.7s;
+    font-size: 20px;
+    font-weight: bold;
+}
+.portfolio .hi-slide .hi-next:hover,
+.portfolio .hi-slide .hi-prev:hover{
+    opacity: 1;
+    background-color: white;
+}
+.portfolio .hi-slide .hi-prev{
+    left: -270px;
+}
+.portfolio .hi-slide .hi-prev::before{
+    content: "<";
+}
+.portfolio .hi-slide .hi-next{
+    right: -280px;
+}
+.portfolio .hi-slide .hi-next::before{
+    content: ">";
+}
+.portfolio .hi-slide > ul{
+    list-style: none;
+    position: relative;
+    width: 754px;
+    height: 292px;
+    margin: 0;
+    padding: 0;
+}
+.portfolio .hi-slide > ul > li{
+    overflow: hidden;
+    position: absolute;
+    z-index: 0;
+    left: 377px;
+    top: 0;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 3px solid white;
+    background-color: #333;
+    cursor: pointer;
+}
+.portfolio .hi-slide > ul > li > a > img{
+    width: 100%;
+    height: 100%;
+    background-position: center;
+}    
+.portfolio .hi-slide > ul > li > h1{
+    position: relative;
+    font-weight:50px;
+    font-size: 3em;
+    color:var(--yellow);
+}    
+.portfolio .hi-slide > ul > li >a:hover img{
+    margin-top: -40px; 
+    
+}
+/*media queries*/                  /*連結javascript偵測按鈕被按*/
+@media (max-width:1200px){
+    
+    html{
+        font-size: 55%;
+    }
+    .home{
+        padding:1rem 4rem;
+    }
+}
+@media (max-width:2400px){
+    
+    header{                 /*左欄起始位置在-120%*/
+        left:-120%;
+    }
+    #menu{
+        display: block;     /*menu以方框呈現*/
+    }
+    header.toggle{         /*左欄位置移到0%被顯示出來*/
+        left:0%;
+    }
+    body{
+        padding: 0;
+    }
+}
+@media (max-width:768px){
+    
+    html{                 
+        font-size: 50%;
+    }
+}
+@media (max-width:400px){
+    
+    header{                 
+        width:100vw;
+    }
+    .heading{
+        margin:0 3 rem;
+    }
+    .about.row.counter.box{
+        width:100%;
+    }
+    .education.box-container.box{
+        width: 100%;
+    }
+    .portfolio .box-container .box{
+        width: 100%;
+    }
+}
